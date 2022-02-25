@@ -1,0 +1,41 @@
+print("What is your name:")
+let name = readLine()
+
+print("How old are you:")
+let age = readLine()
+
+print(" \(name!) What a boring name....")
+
+print(" \(name!) Let's play a game")
+
+print(" I will guess a number, between 1 to 100. ")
+print(" You will then tell me what my number is. If your guess is lower than my number, you will win a Fabulous Prize!   \n Let's get started...")
+
+let randomInt = Int.random(in: 1..<100)
+
+print("What is your Guess:")
+// readLine()! is used to read data from the terminal
+// Dont forget to include the ! at the end
+// readLine()! will return a String value
+let guess:String = readLine()!
+print(" You guessed \(guess)")
+
+// Because readLine()! returns a String, we need to convert the String to an Integer when we want to compare numerical data
+// Int(...)! is used to cast the string to an integer
+// Replace ... with the string data you want to convert, example: Int("25")!
+// On line 20, we saved the user input to a variable called guess
+// So now we pass guess to the Int()! function to convert it to a Integer
+// The result of the Int(...)! will be a variable of data type Int
+// Hence why we delcare guessAsInt as an Int variable
+let guessAsInt:Int = Int(guess)!
+
+// Now that we have the user's guess as an Integer, we can compare it to the randomly generated value
+if (guessAsInt > randomInt ) {
+    print("Your guess is larger! Computer guessed \(randomInt)")
+}
+else if (guessAsInt == randomInt) {
+      print("Your guess is the same! Computer guessed \(randomInt)")
+}
+else {
+      print("Your guess is smaller! Computer guessed \(randomInt)")
+}
