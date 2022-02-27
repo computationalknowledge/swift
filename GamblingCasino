@@ -1,3 +1,12 @@
+/*1. let's study the code and understand how this simple SWIFT program works
+
+2. let's add to the program:
+      LOOP to play 5 times
+      track the player's loses
+
+Add SOME code to encourage the user to start betting some money.
+*/
+
 print("What is your name:")
 let name = readLine()
 
@@ -7,6 +16,7 @@ let age = readLine()
 print(" \(name!) What a boring name....")
 
 print(" \(name!) Let's play a game")
+// start loop
 
 print(" I will guess a number, between 1 to 100. ")
 print(" You will then tell me what my number is. If your guess is lower than my number, you will win a Fabulous Prize!   \n Let's get started...")
@@ -30,12 +40,15 @@ print(" You guessed \(guess)")
 let guessAsInt:Int = Int(guess)!
 
 // Now that we have the user's guess as an Integer, we can compare it to the randomly generated value
+//If HUMAN guess is lower than Computer Guess, THEN HUMAN WINS
 if (guessAsInt > randomInt ) {
-    print("Your guess is larger! Computer guessed \(randomInt)")
+    print("You LOSE!! I guessed \(randomInt)")
 }
 else if (guessAsInt == randomInt) {
       print("Your guess is the same! Computer guessed \(randomInt)")
 }
 else {
-      print("Your guess is smaller! Computer guessed \(randomInt)")
+      print("Human WINS! Computer guessed \(randomInt)")
 }
+
+// end loop
