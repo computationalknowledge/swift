@@ -1,12 +1,3 @@
-/*1. let's study the code and understand how this simple SWIFT program works
-
-2. let's add to the program:
-      LOOP to play 5 times
-      track the player's loses
-
-Add SOME code to encourage the user to start betting some money.
-*/
-
 print("What is your name:")
 let name = readLine()
 
@@ -21,9 +12,13 @@ print(" \(name!) Let's play a game")
 print(" I will guess a number, between 1 to 100. ")
 print(" You will then tell me what my number is. If your guess is lower than my number, you will win a Fabulous Prize!   \n Let's get started...")
 
-let randomInt = Int.random(in: 1..<100)
+var numberOfPlayerWins = 0;
 
-print("What is your Guess:")
+for i in 1...3{
+
+    let randomInt = Int.random(in: 1..<100)
+
+print("What is your Guess:   Round \(i) of 10")
 // readLine()! is used to read data from the terminal
 // Dont forget to include the ! at the end
 // readLine()! will return a String value
@@ -48,7 +43,13 @@ else if (guessAsInt == randomInt) {
       print("Your guess is the same! Computer guessed \(randomInt)")
 }
 else {
-      print("Human WINS! Computer guessed \(randomInt)")
+    numberOfPlayerWins += 1;
+    print("Human WINS! Computer guessed \(randomInt)");
 }
 
 // end loop
+    
+    print("\(name!) won \(numberOfPlayerWins) times" )
+}
+
+print("Thanks for playing, \(name!). As for your prize, honestly, \(name!), by the sweet age of \(age!), you should know better than to believe everything everyone tells you.")
